@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3c</title>
+</head>
+<body>
+<label><input type="number" id="number1">Nhập vào số a</label><br><br>
+<label><input type="number" id="number2">Nhập vào số b</label><br><br>
+<button onclick="tinhtoan()">kết quả</button>
+<p id="result"></p>
+</body>
+<script>
+    function tinhtoan() {
+        let num1 = document.getElementById("number1").value;
+        let num2 = document.getElementById("number2").value;
+        num1 = Number(num1)
+        num2 = Number(num2)
+        let sum = 0;
+        if (num1 > num2) {
+            alert("a phải nhỏ hơn b")
+        } else {
+            for (let i = num1; i <= num2; i++)
+            {
+                sum += i
+            }
+            document.getElementById("result").innerHTML = "Tổng các số từ a đến b là " + sum
+        }
+    }
+</script>
+</body>
+</html>

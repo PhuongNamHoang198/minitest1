@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="number" id="number1">Nhập vào cạnh a</label><br>
+<label><input type="number" id="number2">Nhập vào cạnh b</label><br>
+<label><input type="number" id="number3">Nhập vào cạnh c</label><br>
+<button onclick="tinhtoan()">kết quả</button>
+<p id="result"></p><br>
+</body>
+<script>
+    function tinhtoan(){
+        let num1 = document.getElementById("number1").value;
+        let num2= document.getElementById("number2").value;
+        let num3= document.getElementById("number3").value;
+        num1 = Number(num1)
+        num2 = Number(num2)
+        num3 = Number(num3)
+            if (num1+num2>num3 && num1+num3>num2 && num2+num3>num1) {
+                if (num3 == num1 && num1 == num2){
+                    document.getElementById("result").innerHTML = "Đây là một tam giác đều"
+                }
+                else {
+                    if (num1 == num2 || num2 == num3 || num1 == num3){
+                        document.getElementById("result").innerHTML = "Đây là một tam giác cân"
+                    }
+                    else {
+                        if (num1*num1 == num2*num2 + num3*num3 || num2*num2 == num1*num1 + num3*num3 ||num3*num3 == num2*num2 + num1*num1){
+                            document.getElementById("result").innerHTML = "Đây là tam giác vuông"
+                        }
+                        else {
+                            document.getElementById("result").innerHTML = "Đây là một tam giác"
+                        }
+                    }
+                }
+            }
+            else {
+                document.getElementById("result").innerHTML = "Đây không phải là một tam giác"
+            }
+    }
+</script>
+</html>

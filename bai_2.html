@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_2</title>
+</head>
+<body>
+<label><input type="number" id="a">Nhập số a</label> <br>
+<label><input type="number" id="b">Nhập số b</label> <br>
+<button onclick="result()">Tính tích của a,b</button>
+</body>
+<script>
+    function result(){
+        let numbera = document.getElementById("a").value;
+        let numberb = document.getElementById("b").value;
+        let s = Number(numbera) * Number(numberb)
+       document.write("<h1>" + s +"</h1>")   ;
+    }
+
+</script>
+</html>

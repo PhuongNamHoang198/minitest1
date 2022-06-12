@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3b</title>
+</head>
+<body>
+<label><input type="number" id="number1">Nhập vào số a</label><br><br>
+<label><input type="number" id="number2">Nhập vào số b</label><br><br>
+<button onclick="tinhtoan()">kết quả</button>
+<p id="result1"></p>
+<p id="result2"></p>
+</body>
+<script>
+    function tinhtoan(){
+        let giatria = document.getElementById("number1").value;
+        let giatrib = document.getElementById("number2").value;
+        let binhphuonga = Math.pow(giatria,2);
+        let abinhphuongb= Math.pow(giatria,giatrib);
+        document.getElementById("result1").innerHTML ="a^2= " + binhphuonga
+        document.getElementById("result2").innerHTML = "a^b= " + abinhphuongb
+    }
+</script>
+</body>
+</html>

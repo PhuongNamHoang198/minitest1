@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="number" id="a">Nhập vào năm</label>
+<button onclick="tinhtoan()">kết quả</button>
+<p id="result"></p>
+
+</body>
+<script>
+    function tinhtoan() {
+        let theKy;
+        let nam = document.getElementById("a").value;
+        if(nam % 100 == 0) {
+            theKy = nam/100;
+        } else {
+            theKy = nam/100 + 1;
+        }
+        document.getElementById("result").innerText = parseInt(theKy);
+    }
+</script>
+</html>

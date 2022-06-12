@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_3a</title>
+</head>
+<body>
+<input id="chuvi" type="number" oninput="hinhVuong()" placeholder="nhập vào cạnh hình vuông"/>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+    function hinhVuong() {
+        let a = document.getElementById("chuvi").value;
+        let chuVi = a * 4;
+        let dienTich = a * a;
+        if (a < 0) {
+            alert("độ dài cạnh phải > 0 :")
+
+        } else {
+
+            document.getElementById("result1").innerHTML = "chu vi: " + chuVi
+            document.getElementById("result2").innerHTML = "diện tích: " + dienTich
+
+        }
+    }
+</script>
+</body>
+</html>
